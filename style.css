@@ -49,20 +49,40 @@ h6 {
 }
 
 body{
+    height: 100vh;
     background-color: var(--clr-primary-100);
     font-weight: var(--fw-regular);
     color: #fff;
 }
 
-.container{
+/* .showcase{
     margin: 4rem 2rem;
     background: var(--clr-primary-200);
     overflow: hidden;
     border-radius: .5rem;
+} */
+
+.container{
+    overflow: hidden;
+    margin: 4rem 2rem;
+    background: var(--clr-primary-200);
+    border-radius: .5rem;
 }
 
-picture{
-    background: var(--clr-primary-300);
+.img__component {
+    background-image: url(./images/image-header-mobile.jpg);
+    position: relative;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: hsl(277, 90%, 52%);
+    opacity: 50%;
 }
 
 .heading{
@@ -113,7 +133,7 @@ span{
     color: hsl(228, 45%, 44%); 
 }
 
-@media(min-width: 900px){
+@media(min-width: 600px){
     body{
         display: grid;
         justify-content: center;
@@ -122,36 +142,46 @@ span{
     .showcase{
         display: flex;
         flex-direction: row-reverse;
-        max-width: 1075px;
-    }
-
-    .content{
-        max-width: 1075px;
+        width: 100%;
+        max-width: 600px;
+        height: 50vh;
     }
 
     .grid__wrap{
         display: flex;
         gap: 1rem;
-        margin-left: 2.5rem;
-        margin-top: 4rem;
+        margin-left: 2rem;
+        margin-top: 1rem;
         padding-top: .5rem;
-        gap: 5rem;
+        gap: 1rem;
+    }
+
+    .numbers{
+        font-size: 12px;
+    }
+
+    .letters{
+        font-size: 10px;
     }
 
     .base__wrap{
-        width: 55%;
+        width: 100%;
     } 
 
     .heading{
-        margin-top: 4rem;
+        margin-top: 2rem;
         text-align: start;
-        margin-right: 5rem;
-        font-size: 30px;
+        /* margin-right: 4rem; */
+        font-size: 20px;
     }
 
     .content{
         text-align: start;
-        margin-top: 2rem;
-        font-size: 20px;
+        margin-top: 1rem;
+        font-size: 15px;
+    }
+
+    .img__component {
+        width: 100%;
     }
 }
